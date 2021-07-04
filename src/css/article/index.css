@@ -35,7 +35,7 @@ body {
 .top {
 	width: 300px;
 	position: fixed;
-	bottom: 0; 
+	bottom: 0;
 }
 h1 {
 	font-size: 30px;
@@ -58,7 +58,7 @@ h1 {
 .button {
 	margin-top: 5px;
 	color: white;
-	background-color: #e4d165; 
+	background-color: #e4d165;
 	border-color: transparent;
 	border-radius: 100vh;
 	font-size: 0.8rem;
@@ -89,7 +89,7 @@ h1 {
 	.top {
 		width: 400px;
 		position: absolute;
-		bottom: 0; 
+		bottom: 0;
 	}
 	.goweet {
 		text-align: center;
@@ -117,7 +117,7 @@ h1 {
 	.button {
 		margin-top: 5px;
 		color: white;
-		background-color: #e4d165; 
+		background-color: #e4d165;
 		border-color: transparent;
 		border-radius: 100vh;
 		font-size: 1rem;
@@ -144,7 +144,7 @@ h1 {
 	.top {
 		width: 500px;
 		position: absolute;
-		bottom: 0; 
+		bottom: 0;
 	}
 	.goweet {
 		text-align: center;
@@ -152,7 +152,6 @@ h1 {
 	}
 	h1 {
 		font-size: 50px;
-		color: purple;
 	}
 	a {
 		font-size: 20px;
@@ -176,7 +175,7 @@ h1 {
 	.button {
 		margin-top: 2px;
 		color: white;
-		background-color: #e4d165; 
+		background-color: #e4d165;
 		border-color: transparent;
 		border-radius: 100vh;
 		font-size: 1.6rem;
@@ -201,9 +200,9 @@ h1 {
 
 @media screen and (min-width: 1024px) {
 	.top {
-		width: 600px;
-		position: absolute; 
-		bottom: 0; 
+		width: 400px;
+		position: absolute;
+		bottom: 0;
 	}
 	.goweet {
 		text-align: center;
@@ -228,13 +227,13 @@ h1 {
 		outline: none;
 		margin: 5px;
 		padding-bottom: 8px;
-		box-sizing: border-box; 
+		box-sizing: border-box;
 		border-radius: 1%;
 	}
 	.button {
 		margin-bottom: 10px;
 		color: white;
-		background-color: #e4d165; 
+		background-color: #e4d165;
 		border-color: transparent;
 		border-radius: 100vh;
 		font-size: 1.8rem;
@@ -262,33 +261,32 @@ h1 {
 }
 
 .list_test-wrap {
-	list-style: none; 
-	margin: 0; 
-	padding: 0; 
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .list_test:before {
-	content: ""; 
-	width: 20px; 
-	height: 20px; 
-	display: inline-block; 
-	background-color: #ffffff; 
-	position: relative; 
-	top: 3px; 
-	border-radius: 50%; 
-	margin-right: 5px; 
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-color: #ffffff;
+	position: relative;
+	top: 3px;
+	border-radius: 50%;
+	margin-right: 5px;
 }
 
 .list_test {
-	padding: 10px; 
-	background-color: #65ace4; 
+	padding: 10px;
+	background-color: #65ace4;
 	border-radius: 10px;
-	margin-bottom: 5px; 
-	color: #fff; 
+	margin-bottom: 5px;
+	color: #fff;
 	font-size: 20px;
 }
 
 .copyright {
-	font-size: 2px;
+	font-size: medium;
 }
-
