@@ -1,0 +1,83 @@
+<html>
+
+<style type="text/css">
+  .thum>* {
+    float: left;
+    margin-left: 10;
+  }
+  #loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: rgb(29, 161, 242);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  margin: 200px auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+</style>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/article/index.css">
+
+ </head>
+<body>
+<script>
+window.onload = function() {
+    setTimeout(() => {
+        const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+    }, 5500);
+  
+}
+
+</script>
+<div id="loading">
+    <div class="spinner"></div>
+</div>
+<div class="container">
+  <img src="gopher-doing-weights.gif" alt="go picture" class="gif"> 
+  <button class="button" onclick="location.href ='/hello'">Go HOME</button>
+
+</div>
+
+<div class="thum">
+  {{range .}}
+  <blockquote class="twitter-tweet">
+    <p lang="ja" dir="ltr">{{.Text}}</p>&mdash; {{.User}} (@{{.ScreenName}}) <a
+    href='https://twitter.com/{{.Id}}/status/{{.TweetId}}'>{{.Date}}</a>
+  </blockquote>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  {{end}}
+  
+  
+</div>
+
+
+</body>
+</html>

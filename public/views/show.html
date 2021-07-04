@@ -1,0 +1,33 @@
+{{define "show"}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/article/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <title>Logs</title>
+</head>
+<body>
+    <h1>Goweet History</h1>
+    <ul class="list_test-wrap">
+        {{range .}}
+        <li class="list_test">
+            {{.Tweet}} @ {{.CreatedAt}} by {{.User}}
+        </li>
+        {{end}}
+    </ul>
+
+    <div class="container">
+
+        <img src="gopher-workout.gif" alt="go picture" class="gif"> 
+    
+        <button class="button" onclick="location.href ='/hello'">Go HOME</button>
+
+    </div>
+</body>
+</html>
+
+{{end}}

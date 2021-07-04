@@ -1,0 +1,54 @@
+{{define "hello"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/article/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+          const egoInput = document.getElementById('ego')
+          egoInput.value = ''
+
+          const tweetInput = document.getElementById('tweet')
+          tweetInput.value = ''
+        }
+    </script>
+     <h1 class="greeting">
+         Welcome to Gotter! 
+         
+     </h1>
+     <div class="container">
+         <form action="/tweets" method="POST" class="form">
+             <label for="text">eGo Search: </label>
+             <input id="ego" class="text" type="text" placeholder="eGo Search" name= "text" value="{{.Text}}">
+             <input class="button" type="submit" value="GO!!" onclick="reset">
+         </form>
+         <br>
+         <form action="/gotweets" method="POST" class="form">
+            <label for="text">Go! Goweet: </label>
+            <input id="tweet" class="text" type="text" placeholder="How are you feeling ?" name= "message" value="{{.Message}}">
+            <input class="button" type="submit" value="GO!!" onclick="reset">
+        </form>
+     </div>
+
+    <p class="goweet">My goweet : {{.Result}}</p>
+    <p><a href="/logs">Logs</a></p>
+
+     <div class="go-container">
+
+         <img src="gopher-nobg.png" alt="go picture" class="top"> 
+     </div>
+     <footer>
+        <p class="copyright">&copy; The Go gopher was designed by Renée French. </p>
+      </footer>
+</body>
+</html>
+
+{{end}}
